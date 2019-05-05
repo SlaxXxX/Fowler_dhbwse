@@ -1,0 +1,2 @@
+# Fowler_dhbwse
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/20d71e708ac9491da855ec4adb725dd2)](https://app.codacy.com/app/SlaxXxX/Fowler_dhbwse?utm_source=github.com&utm_medium=referral&utm_content=SlaxXxX/Fowler_dhbwse&utm_campaign=Badge_Grade_Dashboard)
