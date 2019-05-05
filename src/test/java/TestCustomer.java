@@ -5,21 +5,43 @@ import org.junit.jupiter.api.Test;
 
 class TestCustomer {
     private Customer customer;
+    private Movie movie1, movie2;
+    private Rental rental1, rental2;
 
     @BeforeEach
     void setUp() {
         customer = new Customer("joe");
-        Movie m1 = new Movie("movie1", 1);
-        Movie m2 = new Movie("movie2", 2);
-        Rental r1 = new Rental(m1, 10);
-        Rental r2 = new Rental(m2, 5);
+        movie1 = new Movie("movie1", 1);
+        movie2 = new Movie("movie2", 2);
+        rental1 = new Rental(movie1, 10);
+        rental2 = new Rental(movie2, 5);
 
-        customer.addRental(r1);
-        customer.addRental(r2);
+        customer.addRental(rental1);
+        customer.addRental(rental2);
     }
 
     @Test
-    void statement() {
+    void testCustomerMethods() {
+        Assertions.assertEquals(customer.getName(), "joe");
+    }
+
+    @Test
+    void testMovieMethods() {
+        Assertions.assertEquals(movie1.getPriceCode(), 1);
+        movie1.setPriceCode(3);
+        Assertions.assertEquals(movie1.getPriceCode(), 3);
+        movie1.setPriceCode(1);
+        Assertions.assertEquals(movie1.getTitle(), "movie1");
+    }
+
+    @Test
+    void testRentalMethods() {
+        Assertions.assertEquals(rental1.getDaysRented(), 10);
+        Assertions.assertEquals(rental1.getMovie().getTitle(), "movie1");
+    }
+
+    @Test
+    void testCompleteStatement() {
         String expected = "Rental Record for joe\n" +
                 "\tTitle\t\tDays\tAmount\n" +
                 "\tmovie1\t\t10\t30.0\n" +
