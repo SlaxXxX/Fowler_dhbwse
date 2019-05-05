@@ -1,3 +1,5 @@
+package slx.dhbw;
+
 public class Movie {
     public static final int CHILDRENS = 2;
     public static final int REGULAR = 0;
@@ -26,7 +28,7 @@ public class Movie {
                 price = new NewReleasePrice();
                 break;
             default:
-                throw new IllegalArgumentException("Incorrect Price Code");
+                throw new IllegalArgumentException("Incorrect slx.dhbw.Price Code");
         }
     }
 
@@ -34,11 +36,11 @@ public class Movie {
         return title;
     }
 
-    double getCharge(int daysRented) {
+    public double getCharge(int daysRented) {
         return price.getCharge(daysRented);
     }
 
-    int getFrequentRenterPoints(int daysRented) {
+    public int getFrequentRenterPoints(int daysRented) {
         return price.getFrequentRenterPoints(daysRented);
     }
 

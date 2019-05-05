@@ -1,4 +1,6 @@
-class Rental {
+package slx.dhbw;
+
+public class Rental {
     private Movie movie;
     private int daysRented;
 
@@ -15,11 +17,11 @@ class Rental {
         return movie;
     }
 
-    double getCharge() {
+    public double getCharge() {
         return movie.getCharge(daysRented);
     }
 
-    int getFrequentRenterPoints() {
+    public int getFrequentRenterPoints() {
         return movie.getFrequentRenterPoints(daysRented);
     }
 }
