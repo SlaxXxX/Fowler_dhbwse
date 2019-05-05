@@ -27,10 +27,10 @@ class TestCustomer {
 
     @Test
     void testMovieMethods() {
-        Assertions.assertEquals(movie1.getPriceCode(), 1);
-        movie1.setPriceCode(3);
-        Assertions.assertEquals(movie1.getPriceCode(), 3);
-        movie1.setPriceCode(1);
+        Assertions.assertEquals(movie1.getPrice(), 1);
+        movie1.setPrice(0);
+        Assertions.assertEquals(movie1.getPrice(), 0);
+        movie1.setPrice(1);
         Assertions.assertEquals(movie1.getTitle(), "movie1");
     }
 
